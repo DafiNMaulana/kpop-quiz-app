@@ -1,0 +1,50 @@
+/* ---------background----------- */
+body {
+    overflow: hidden;
+    background-image: url('/src/img/baim-pilih.png');
+    background-size: auto;
+    background-repeat: no-repeat;
+    background-position:  center 43px;
+
+}
+.container-fluid{
+    position: relative;
+    width: 100%;
+    height: 32vh;
+}
+
+.container-fluid .row{
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+}
+/* ---------background END----------- */
+
+
+/* ---------judul----------- */
+.container .row:nth-child(1) h1 {
+    font-family: 'inter', sans-serif;
+}
+/* ---------judul END----------- */
+
+
+/* ---------kategori----------- */
+.container .row:nth-child(2) .col-12 >a .kotak-bts, .kotak-bp {
+    width: 147px;
+    height: 153px;
+    display: block;
+    border-radius: 20px;
+}
+.container .row:nth-child(2) .col-12 >a .kotak-bts {
+    background-image: linear-gradient(to top, #4E87A8, rgba(148, 209, 209, 78%));
+}
+.container .row:nth-child(2) .col-12 >a .kotak-bp {
+    background-image: linear-gradient(to top, #FF4BCD, rgba(255, 188, 188, 78%));
+}
+/* ---------kategori END----------- */
+
+
+
+

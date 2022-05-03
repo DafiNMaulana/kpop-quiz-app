@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/style-katbts.css">
+    <link rel="stylesheet" href="node_modules/aos/dist/aos.css">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/node_modules/sweetalert2/dist/sweetalert2.min.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <title>Quiz Kpop</title>
+</head>
+    <body>
+
+        <!-- soal dan skor -->
+        <div class="container">
+            <div class="row justify-content-between px-3 pt-3">
+                <div class="col-3 text-center">
+                    <p>Soal:</p>
+                    <p>1</p>
+                </div>
+                <div class="col-5 text-center">
+                    <p>Sisa waktu:</p>
+                    <p id="skor">1</p>
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col-12 text-center">
+                    <h3 data-aos="fade"
+                    data-aos-duration="1000"
+                    id="soal"></h3>
+                </div>
+            </div>
+
+            <div class="row align-items-center flex-column">
+                <label 
+                for="jawaban" 
+                id="answer-0"
+                class="col-11 col-md-4 rounded-pill p-2 text-center text-light" 
+                data-aos="fade-right" 
+                data-aos-delay="500">
+                </label>
+                <input type="radio" name="jawaban" id="jawaban" data-id="0">
+
+                <label 
+                for="jawaban2" 
+                id="answer-1"
+                class="col-11 col-md-4 rounded-pill mt-3 mb-3 p-2 text-center text-light" 
+                data-aos="fade-right" 
+                data-aos-delay="1000">
+                </label>
+                <input type="radio" name="jawaban" class="mb-3" id="jawaban2" data-id="1">
+                
+                <label 
+                for="jawaban3" 
+                id="answer-2"
+                class="col-11 col-md-4 rounded-pill p-2 text-center text-light" 
+                data-aos="fade-right" 
+                data-aos-delay="1500">
+                </label>
+                <input type="radio" name="jawaban" id="jawaban3" data-id="2">
+            </div>
+
+            <div class="row">
+                <div class="col-12 text-end">
+                    <button class="btn btn-primary rounded-pill px-4" onclick="nextQuestion()">
+                        Next <i class="fa fa-angle-double-right"></i> 
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- soal dan skor END -->
+
+
+        <!-- kumpulan oppa jelek -->
+        <div class="container-fluid">
+            <div class="row">
+            </div>
+        </div>
+        <!-- kumpulan oppa jelek END -->
+
+
+<script src="node_modules/aos/dist/aos.js"></script>
+<script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="/node_modules/sweetalert2/dist/sweetalert2.all.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="/src/script.js"></script>
+<script src="/src/action.js"></script>
+    </body>
+</html>

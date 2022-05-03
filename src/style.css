@@ -1,0 +1,67 @@
+/* ------------------background-------------- */
+body 
+{
+    background-image: linear-gradient(to top,#FF0B00 , #2500AF 80%);
+    background-size: cover;
+    height: 100vh;
+}
+.container-fluid {
+    position: relative; 
+    height: 100%;
+}
+.container-fluid > img {
+    position: absolute; 
+    bottom: 0; 
+    right: 0;
+}
+.container-fluid::after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 210px;
+    background-image: linear-gradient(to top, rgba(255, 11, 0, .7), rgba(0, 0, 0, 0));
+}
+/* ------------------background END-------------- */
+
+/* ------------------button start-------------- */
+.container-fluid .row a {
+    font-family: 'inter', sans-serif;
+    font-size: 25px;
+    border-radius: 20px;
+    padding: 10px 60px;
+    color: #FF0B00;
+    transition: .3s;
+}
+
+.container-fluid .row a:hover {
+    box-shadow: 2px 3px 3px 1px rgba(31, 31, 31, 0.3);
+}
+.container-fluid .row a:active {
+    box-shadow: none;
+}
+
+.container-fluid .row:nth-child(4) {
+    position: inherit;
+    margin-top: 195px;
+    z-index: 99;
+}
+/* ------------------button start END-------------- */
+
+/* ------------------judul opening-------------- */
+.container-fluid .row:nth-child(2) h1 {
+    font-family: 'inter', sans-serif;
+    font-size: 55px;
+    margin-top: 60px;
+    padding-left: 20px;
+}
+
+@media (min-width: 992px) {
+    .container-fluid .row:nth-child(2) .col {
+        text-align: center;
+    }
+}
+/* ------------------judul opening END-------------- */
+
