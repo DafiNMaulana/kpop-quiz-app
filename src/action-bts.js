@@ -123,12 +123,14 @@ $(document).ready(function() {
      * fungsi untuk menyelesaikan quiz
      */
     function finish(skor) {
-        Swal.fire({
-            icon: 'success',
-            title: 'Selesai',
-            text: 'Quiz telah selesai',
-        })
+        // Swal.fire({
+        //     icon: 'success',
+        //     title: 'Selesai',
+        //     text: 'Quiz telah selesai',
+        // })
         // and other actions in here
+        alert('tekan logo untuk memilih kategori')
+        window.location.replace('hasil-katbts.html');
     }
 
     // trigger event ketika jawaban di klik
