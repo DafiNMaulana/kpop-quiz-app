@@ -2,7 +2,7 @@
 /* ---------background---------- */
 body 
 {     
-    background-image: linear-gradient(#74BCFF , #74BCFF 80%);
+    background: #FF87CB !important;
     overflow: hidden; 
 }
 .container-fluid {
@@ -14,16 +14,16 @@ body
     right: 0;
     bottom: 0;
     height: 200px;
-    background-size: 490px;
-    background-position: -70px 10px;
+    background-size: 380px;
+    background-position: center 50px;
     background-repeat: no-repeat;
-    background-image: url('/src/img/bts-kumpulan.png');
+    background-image: url('/src/img/bp-kumpulan.png');
 }
 
 @media (min-width: 400px) {
     .container-fluid .row {
         position: absolute;
-        background-position: center 10px;
+        background-position: center 50px;
     }
 }
 /* ---------background---------- */
@@ -53,7 +53,7 @@ body
     margin-top: 50px;
 }
 .container .row:nth-child(3) .col-11 {
-    background-color: #396186;
+    background-color: #EE1889;
     cursor: pointer;
     /* transition: .2s; */
 }

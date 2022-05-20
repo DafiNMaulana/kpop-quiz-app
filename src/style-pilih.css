@@ -7,18 +7,12 @@ body {
     background-position:  center 43px;
 
 }
-.container-fluid{
-    position: relative;
-    width: 100%;
-    height: 32vh;
-}
 
 .container-fluid .row{
     position: absolute;
     right: 0;
     left: 0;
     bottom: 0;
-    margin: auto;
 }
 /* ---------background END----------- */
 
