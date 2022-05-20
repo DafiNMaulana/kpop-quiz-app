@@ -3,7 +3,7 @@ $(document).ready(function() {
     // eruda.init()
 
     window.timer; // global variable timer
-    window.timeLeft = 5 // global time left
+    window.timeLeft = 10 // global time left
     window.current = 0 // global current timing
     window.correct = 0 // global total correct answer
 
@@ -12,12 +12,12 @@ $(document).ready(function() {
      * tempat disimpannya data objek quiz
      */
     var dataQuiz = [{
-        question: 'BTS dikenal dengan nama lain...',
-        answer: ['Bangtan Sonyeondan', 'Bangtan Scene', 'Behind the Scene'],
+        question: 'Siapakah member yang memegang katana di MV DDU-DU DDU-DU?',
+        answer: ['Jennie', 'Lisa', 'Jisoo'],
         correct: 0
     }, {
-        question: 'Berapakah jumlah anggota BTS...',
-        answer: ['4', '8', '7'],
+        question: 'Siapakah member BLACKPINK yang berperan dalam Drama SNOWDROP?',
+        answer: ['Jisoo', 'Jennie', 'Lisa'],
         correct: 2
     }, {
         question: 'Siapakah leader BTS?',
