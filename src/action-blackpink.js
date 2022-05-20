@@ -14,42 +14,42 @@ $(document).ready(function() {
     var dataQuiz = [{
         question: 'Siapakah member yang memegang katana di MV DDU-DU DDU-DU?',
         answer: ['Jennie', 'Lisa', 'Jisoo'],
-        correct: 0
+        correct: 1
     }, {
         question: 'Siapakah member BLACKPINK yang berperan dalam Drama SNOWDROP?',
         answer: ['Jisoo', 'Jennie', 'Lisa'],
-        correct: 2
-    }, {
-        question: 'Siapakah leader BTS?',
-        answer: ['Wonwoo', 'Cha Eun-woo', 'Rap Monster'],
-        correct: 2
-    }, {
-        question: 'Siapakah anggota pertama BTS?',
-        answer: ['Supreme Boi', 'Rap Monster', 'Bang Si Hyuk'],
-        correct: 1
-    }, {
-        question: 'Bulan apa BTS debut?',
-        answer: ['Desember', 'Juni', 'Maret'],
-        correct: 1
-    }, {
-        question: 'Siapa Dancer BTS?',
-        answer: ['J-Hope', 'Jimin', 'Jungkook'],
         correct: 0
     }, {
-        question: 'Apa nama asli Rap Monster?',
-        answer: ['Kim Book-jo', 'Kim Jungkook', 'Kim Namjoon'],
-        correct: 2
-    }, {
-        question: 'Apa nama panggung Kim Taehyung?',
-        answer: ['Supreme Boi', 'V', 'Nuna V'],
+        question: 'Siapakah member BLACKPINK yang merilis solo album pertamanya di antara semua member?',
+        answer: ['Rose', 'Lisa', 'Jennie'],
         correct: 1
     }, {
-        question: 'Apa nama fandom BTS?',
-        answer: ['Once', 'VIP', 'ARMY'],
+        question: 'BLACKPINK berasal dari agensi mana?',
+        answer: ['Pledis Ent', 'YG Ent', 'JYP Ent'],
+        correct: 1
+    }, {
+        question: 'Tahun Berapakah BLACKPINK debut?',
+        answer: ['31 Agustus 2017', '5 Juli 2003', '8 Agustus 2016'],
         correct: 2
     }, {
-        question: 'Apa kepanjangan dari A.R.M.Y?',
-        answer: ['Adorable Representative M.C For Young', 'Awesome Representative M.C For Your', 'Adorable Representative M.C For Youth'],
+        question: 'Siapakah member BLACKPINK yang berasal dari negeri Gajah Putih?',
+        answer: ['Rose', 'Lisa', 'Jennie'],
+        correct: 1
+    }, {
+        question: 'Member yang memiliki nama asli Roseanne Park adalah...',
+        answer: ['Rose', 'Lisa', 'Jisoo'],
+        correct: 0
+    }, {
+        question: 'Member yang memiliki nama asli Lalisa Manoban adalah...',
+        answer: ['Rose', 'Lisa', 'Jisoo'],
+        correct: 1
+    }, {
+        question: 'Berapakah member BLACKPINK?',
+        answer: ['3', '5', '4'],
+        correct: 2
+    }, {
+        question: 'Apa nama Fandom BLACKPINK?',
+        answer: ['ARMY', 'ELF', 'Blink'],
         correct: 2
     }, ]
 
