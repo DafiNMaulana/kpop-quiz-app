@@ -17,7 +17,7 @@ body
     background-size: 490px;
     background-position: -70px 10px;
     background-repeat: no-repeat;
-    background-image: url('/src/img/bts-kumpulan.png');
+    background-image: url('https://raw.githubusercontent.com/DafiNMaulana/kpop-quiz-app/main/src/img/bts-kumpulan.png');
 }
 
 @media (min-width: 400px) {

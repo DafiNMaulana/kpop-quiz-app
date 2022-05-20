@@ -1,7 +1,7 @@
 /* ---------background----------- */
 body {
     overflow: hidden;
-    background-image: url('/src/img/baim-pilih.png');
+    background-image: url('https://raw.githubusercontent.com/DafiNMaulana/kpop-quiz-app/main/src/img/baim-pilih.png');
     background-size: auto;
     background-repeat: no-repeat;
     background-position:  center 43px;
