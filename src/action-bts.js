@@ -1,6 +1,6 @@
 $(document).ready(function() {
     // uncomment for open console in mobile browser
-    eruda.init()
+    // eruda.init()
 
     window.timer; // global variable timer
     window.timeLeft = 10 // global time left
