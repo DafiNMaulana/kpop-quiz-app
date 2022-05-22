@@ -157,7 +157,7 @@ $(document).ready(function() {
             if (v.isConfirmed) {
                 localStorage.setItem('skor-bp', window.correct)
                 console.log(window.correct)
-                window.location.href = '/hasil-katblackpink.html'
+                window.location.href = 'hasil-katblackpink.html'
             } else {
                 var skor = localStorage.getItem('skor-bp')
                 if (!!skor) {
