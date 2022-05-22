@@ -35,10 +35,10 @@
     <div class="container">
         <div class="row text-center">
             <div class="col-12 mt-5">
-                <p class="fw-bold text-capitalize">Skor kamu :</p>
+                <p class="fw-bold text-capitalize">Skor kamu:</p>
             </div>
             <div class="col-12">
-                <h1 style="color: #FF4DCD;">70</h1>
+                <h1 style="color: #FF4DCD;" id="skor-bp">0</h1>
             </div>
         </div>
     </div>
@@ -61,5 +61,13 @@
 <script src="src/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="src/script.js"></script>
+<script>
+    $(document).ready(function() {
+        var skor = localStorage.getItem('skor-bp') || 0
+        skor = skor > 0 ? `${skor}0` : 0
+
+        $('#skor-bp').text(skor)
+    })
+</script>
 </body>
 </html>
