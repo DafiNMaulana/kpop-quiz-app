@@ -157,7 +157,7 @@ $(document).ready(function() {
             if (v.isConfirmed) {
                 localStorage.setItem('skor-bts', window.correct)
                 console.log(window.correct)
-                window.location.href = '/hasil-katbts.html'
+                window.location.href = 'hasil-katbts.html'
             } else {
                 var skor = localStorage.getItem('skor-bts')
                 if (!!skor) {
