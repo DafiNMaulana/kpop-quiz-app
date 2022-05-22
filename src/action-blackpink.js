@@ -53,22 +53,47 @@ $(document).ready(function() {
         correct: 2
     }, ]
 
+    dataQuiz = dataQuiz.sort(() => .5 - Math.random()) // shuffle array (soal diacak)
 
     /**
      * Function setupQuestion
      * fungsi yang digunakan untuk menampilkan persoal
      */
     function setupQuestion() {
-        $('#soal').html(dataQuiz[window.current]['question']);
-        $('#soal-id').html(window.current + 1)
-        dataQuiz[window.current]['answer'].map((val, index) => {
-            // console.log(index, val)
-            $(`#answer-${index}`).html(val)
-        })
+        setTimeout(() => {
+            $('#soal').html(dataQuiz[window.current]['question']);
+            $('#soal-id').html(window.current + 1)
+            dataQuiz[window.current]['answer'].map((val, index) => {
+                // console.log(index, val)
+                $(`#answer-${index}`).html(val)
+            })
+        }, 1000)
     }
 
+    /**
+     * Swal.fire popup info
+     */
+    Swal.fire({
+        title: '<h3>Petunjuk Penggunaan<h3>',
+        icon: 'info',
+        html:
+            '<p>Harap diperhatikan:</p><br/>' +
+            '<ul>' +
+               `<li>Estimasi waktu pengerjaan adalah ${window.timeLeft} detik per satu soal</li>` +
+               `<li>Soal dibuat acak dengan total ${dataQuiz.length} soal</li>` +
+               '<li>Selamat mengerjakan 🎉</li>' +
+            '</ul>',
+        confirmButtonText: 'Mulai'
+    }).then(v => {
+        if (v.isConfirmed) {
+            setupQuestion()
+            startTimer()
+        }
+        console.log(v)
+    })
+
     // memanggil fungsi untuk pertamakalinya
-    setupQuestion()
+    // setupQuestion()
 
     /**
      * Function nextQuestion
@@ -93,6 +118,7 @@ $(document).ready(function() {
      * fungsi untuk menjalankan timer per soal
      */
     function startTimer() {
+        $("#skor").text("0")
         window.timer = setInterval(function() {
             if (window.timeLeft <= 0) {
                 clearInterval(window.timer)
@@ -104,9 +130,9 @@ $(document).ready(function() {
                 } else {
                     nextQuestion()
                     setTimeout(() => {
-                        window.timeLeft = 5
+                        window.timeLeft = 10
                         startTimer()
-                    }, 500)
+                    }, 1000)
                 }
             } else {
                 $("#skor").text(window.timeLeft)
@@ -116,21 +142,31 @@ $(document).ready(function() {
     }
 
     // memulai timer soal
-    startTimer()
+    // startTimer()
 
     /**
      * Function finish
      * fungsi untuk menyelesaikan quiz
      */
     function finish(skor) {
-        // Swal.fire({
-        //     icon: 'success',
-        //     title: 'Selesai',
-        //     text: 'Quiz telah selesai',
-        // })
-        // and other actions in here
-        alert('tekan logo untuk memilih kategori')
-        window.location.replace('hasil-katblackpink.html');
+        Swal.fire({
+             icon: 'success',
+             title: 'Selesai',
+             text: 'Quiz telah selesai',
+        }).then(v => {
+            if (v.isConfirmed) {
+                localStorage.setItem('skor-bp', window.correct)
+                console.log(window.correct)
+                window.location.href = '/hasil-katblackpink.html'
+            } else {
+                var skor = localStorage.getItem('skor-bp')
+                if (!!skor) {
+                    localStorage.removeItem('skor-bp')
+                }
+            }
+        })
+        // alert('tekan logo untuk memilih kategori')
+        // window.location.replace('hasil-katblackpink.html');
     }
 
     // trigger event ketika jawaban di klik
@@ -144,12 +180,12 @@ $(document).ready(function() {
             $(`#answer-${ans}`).addClass('bg-success')
             setTimeout(() => {
                 $(`#answer-${ans}`).removeClass('bg-success')
-            }, 500)
+            }, 1000)
         } else { // bila salah
             $(`#answer-${ans}`).addClass('bg-danger')
             setTimeout(() => {
                 $(`#answer-${ans}`).removeClass('bg-danger')
-            }, 500)
+            }, 1000)
         }
 
         // console.log('jawaban benar:', cek, '|ans:', ans)
@@ -163,10 +199,9 @@ $(document).ready(function() {
             nextQuestion()
             // console.log('soal ke-', window.current)
             setTimeout(() => {
-                window.timeLeft = 5
+                window.timeLeft = 10
                 startTimer()
-                // nextQuestion()
-            }, 500)
+            }, 1000)
             // console.log($(this).attr('data-id'))
         }
     })
